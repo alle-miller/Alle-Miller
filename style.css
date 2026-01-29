@@ -1,0 +1,56 @@
+p{
+	color: hotpink;
+	font-family: Helvetica, Arial, sans-serif;
+}
+h1{
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+body {
+	background-color: lightpink;
+}
+#container {
+	background-color: white;
+	width:95%;
+	margin-left:auto;
+	margin-right: auto;
+} 
+#nav {
+	list-style-type: none;
+	padding: 0;
+
+}
+
+#nav li{
+	margin:0;
+	padding:0;
+	border-bottom: 1px solid #black;
+}
+#nav a:link, a:visited {
+	display:block;
+    color: #white;
+    background-color: #skyblue;
+    font-weight: bold;
+    text-align:center;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 10px;
+}
+
+#nav a:hover, a:active {
+    background-color: #darkblue;
+}
+.caption{
+	color: black;
+	font-family: Georgia, "Times New Roman",serif;
+	font-style: italic;
+	font-size: 0.8em;
+	margin-top: 0;
+	text-align: right;
+}
+.footer{
+	color: black;
+	font-family: Georgia, "Times New Roman",serif;
+	font-size: 0.8em;
+	border-top: 10px solid black;
+}
