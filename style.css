@@ -24,13 +24,13 @@ body {
 #nav li{
 	margin:0;
 	padding:0;
-	border-bottom: 1px solid #black;
+	border-bottom: 1px solid black;
 	text-decoration: none;
 }
 #nav a:link, a:visited {
 	display:block;
-    color: #white;
-    background-color: #skyblue;
+    color: white;
+    background-color: skyblue;
     font-weight: bold;
     text-align:center;
     text-decoration: none;
@@ -39,7 +39,7 @@ body {
 }
 
 #nav a:hover, a:active {
-    background-color: #darkblue;
+    background-color: darkblue;
 }
 .caption{
 	color: black;
