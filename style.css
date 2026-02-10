@@ -1,9 +1,15 @@
+html{
+    font-size: 100%;
+}
 p{
 	color: hotpink;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+      line-height: 1.5rem;
 }
 h1{
-	font-family: Georgia, "Times New Roman", serif;
+	font-family:"Fira Sans", Georgia, "Times New Roman", serif;
+	font-size: 4rem;
 }
 
 body {
