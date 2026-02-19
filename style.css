@@ -1,8 +1,137 @@
 html{
     font-size: 100%;
 }
+
+
+.navigation{
+  list-style: none;
+  background: lightblue;
+  margin:0;
+  padding: 0;
+  display: flex;
+  flex-flow:column;
+}
+
+.navigation a{
+  text-decoration: none;
+  display: block;
+  text-align:center;
+  color: white;
+  padding:10px;
+  border-top:1px solid white;
+  border-bottom:1px solid white;
+}
+
+.navigation li:last-of-type a{
+  border-bottom: none;
+}
+
+img{
+  width:100%;
+}
+
+
+@media (min-width:800px){
+.navigation{
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+.navigation a{
+  border-top:none;
+  border-bottom:none;
+}
+.navigation a:hover{
+  background:black;
+}
+
+.first {
+  margin-right: auto;
+}
+
+.main{
+  display:flex;
+  flex-flow:row;
+}
+
+img{
+  width:50%;
+  height:200px;
+  margin-right:10px;
+}
+
+}
+
+
+
+
+
+
+
+/*We need to tell the browser we want to work with flex*/
+.wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header, .main, .aside, .footer{
+  flex: 1 100%;
+  padding: 10px;
+}
+
+.header{
+  background: tomato;
+}
+
+.footer{
+  background: lightgreen;
+}
+
+.main{
+  text-align: left;
+  background: deepskyblue;
+}
+
+.aside-1{
+  background: gold;
+}
+
+.aside-2{
+  background: hotpink;
+}
+
+
+/*Flexbox items can be given different widths. An item with a flexbox of 2 is twice as flexible as one with a flex of 1. So it makes sense that we want our main section to be the most flexible in this example. */
+@media (min-width: 800px){
+  .aside{
+    flex: 1 auto;
+  }
+
+  .main {
+    flex: 3 0px;
+  }
+
+  .aside-1{
+    order:1;
+  }
+  .main{
+    order: 2;
+  }
+  .aside-2{
+    order: 3;
+  }
+  .footer{
+    order: 4;
+  }
+}
+
+body {
+  padding: 2em;
+}
+
 p{
-	color: hotpink;
+	color: white;
 	font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
 	font-size: 1rem;
       line-height: 1.5rem;
