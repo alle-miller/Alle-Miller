@@ -1,0 +1,136 @@
+/*Styles go here*/
+
+.title{
+  display: flex;
+  justify-content: space-between;
+}
+nav ul{
+  display:flex;
+  flex-flow:column;
+}
+.authorbox img{
+  display:none;
+}
+.pullquotes{
+  display:none;
+}
+article{
+  margin-bottom: 0.7em:column;
+  border-bottom: 1px solid #cccc;
+}
+article:last-of-type{
+  border-bottom: none;
+}
+@media screen and (min-width: 450px) {
+  nav ul {
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 600px) {
+  #container {
+    width:80%;
+  }
+  
+  .authorbox{
+    width:25%;
+    float: left;
+    max-width: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+.authorbox img{
+    display: block;
+    width: 100%;
+    margin-top: 0.5em;
+  }
+
+}
+@media screen and (min-width: 800px){
+  .item1{
+    margin-right: auto;
+  }
+  nav ul li{
+    margin:5px;
+  }
+  .pullquote{
+    display:block;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  article{
+    display:grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+      "a b b"
+      "c c e"
+      ". d d";
+  }
+
+  .authorbox{
+    width: 100%;
+  }
+  .authorbox {
+    width: 100%;
+    grid-area: a;
+  }
+  .section1 {
+    grid-area: b;
+  }
+  .image {
+    grid-area: c;
+  }
+  .section2 {
+    grid-area: d;
+  }
+  .pullquote {
+    grid-area: e;
+    margin: 0;
+  }
+  .section1 p:first-of-type, .section2 p:first-of-type {
+    margin-top: 0;
+  }
+}
+/* ====================================================
+These are styles that will be used later in the example.
+They're just tedious to write out.
+=======================================================
+
+
+article {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas:
+      "a b b"
+      "c c e"
+      ". d d";
+    }
+
+.authorbox {
+    width: 100%;
+    grid-area: a;
+  }
+  .section1 {
+    grid-area: b;
+  }
+  .image {
+    grid-area: c;
+  }
+  .section2 {
+    grid-area: d;
+  }
+  .pullquote {
+    grid-area: e;
+    margin: 0;
+  }
+  .section1 p:first-of-type, .section2 p:first-of-type {
+    margin-top: 0;
+  }
+
+
+  ==================================================== */
+

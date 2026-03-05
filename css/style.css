@@ -1,0 +1,147 @@
+/*These are the basic styles for the page -- we'll add the Grid stuff to them*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    line-height: 1.45em;
+}
+
+#container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+}
+
+p {
+    font-family: "Merriweather", Georgia, "Times New Roman", serif;
+    font-size: 1em;
+    margin-bottom: 0.8em;
+}
+
+aside p {
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+.caption {
+    font-size: 0.7em;
+    text-align: right;
+    margin-top: 0;
+    font-style: italic;
+}
+
+.byline {
+    font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+    font-size: 0.7em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    line-height: normal;
+}
+
+.dateline {
+    font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+    font-size: 0.7em;
+    color: #aaa;
+    margin: 0;
+    line-height: normal;
+}
+
+.pullquote {
+  font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.25em;
+  font-style: italic;
+  line-height: 1.25;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.title {
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    border-radius: 5%;
+    margin-left: 0.5em;
+    height: 3em;
+}
+
+
+footer {
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #bd5532;
+}
+
+
+/*@media screen and (min-width: 600px) {
+
+    #container {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    #container {
+        width: 70%;
+        max-width: 60em;
+    }
+
+    article {
+        max-width: 40em;
+        margin-left: 5em;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        margin-left: 1.8em;
+    }
+}*/
