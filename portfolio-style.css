@@ -1,0 +1,597 @@
+/* ==================== GLOBAL STYLES ==================== */
+:root {
+    --color-pink: #e4568b;
+    --color-green: #5d7b3d;
+    --color-light-blue: #a7c7e4;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --stripe-width: 75.8px;
+    --stripe-gap: 75.77px;
+    --font-satisfy: 'Satisfy', cursive;
+    --font-nunito: 'Nunito', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-nunito);
+    color: var(--color-black);
+    background-color: var(--color-white);
+    overflow-x: hidden;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 1200px;
+    background-color: var(--color-white);
+    overflow: hidden;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-pink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    z-index: 100;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+.logo {
+    font-family: var(--font-satisfy);
+    font-size: 72px;
+    color: var(--color-white);
+    font-style: italic;
+}
+
+/* Stripe Background */
+.stripes {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 100px);
+    top: 100px;
+    left: 0;
+    display: flex;
+    overflow: hidden;
+}
+
+.stripe {
+    flex: 0 0 auto;
+}
+
+.stripe-light {
+    width: var(--stripe-width);
+    background-color: var(--color-light-blue);
+}
+
+.stripe-dark {
+    width: var(--stripe-width);
+    background-color: var(--color-green);
+}
+
+/* Name Badge */
+.name-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: white;
+    border-radius: 50px;
+    padding: 30px 60px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.badge-text {
+    text-align: center;
+}
+
+.badge-subtitle {
+    font-family: var(--font-nunito);
+    font-size: 120px;
+    font-weight: 500;
+    color: var(--color-black);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.badge-title {
+    font-family: var(--font-satisfy);
+    font-size: 250px;
+    color: var(--color-pink);
+    margin: 0;
+    line-height: 1.1;
+    font-style: italic;
+}
+
+/* ==================== MENU MODAL ==================== */
+.menu-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-pink) 100%);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+}
+
+.menu-modal.active {
+    transform: translateX(0);
+}
+
+.menu-stripes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    pointer-events: none;
+}
+
+.menu-stripes .stripe {
+    flex: 0 0 auto;
+}
+
+.menu-stripes .stripe-light {
+    width: var(--stripe-width);
+    background-color: rgba(167, 199, 228, 0.3);
+}
+
+.menu-stripes .stripe-dark {
+    width: var(--stripe-width);
+    background-color: rgba(93, 123, 61, 0.3);
+}
+
+.menu-header {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-pink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.menu-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-close:hover {
+    transform: scale(1.1);
+}
+
+.menu-nav {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 100px 60px;
+    align-items: center;
+}
+
+.menu-link {
+    font-family: var(--font-satisfy);
+    font-size: 80px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.menu-link:hover {
+    opacity: 0.8;
+}
+
+/* ==================== ABOUT SECTION ==================== */
+.about-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-white);
+    padding: 0;
+    overflow: hidden;
+}
+
+.section-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-pink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    z-index: 100;
+}
+
+.menu-toggle-about,
+.menu-toggle-work {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle-about:hover,
+.menu-toggle-work:hover {
+    transform: scale(1.1);
+}
+
+.section-title {
+    position: relative;
+    font-family: var(--font-satisfy);
+    font-size: 250px;
+    color: var(--color-pink);
+    text-align: center;
+    padding-top: 120px;
+    margin: 0;
+    font-style: italic;
+    z-index: 10;
+}
+
+.about-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 60px;
+    z-index: 10;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 0 0 auto;
+    width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+    font-family: var(--font-nunito);
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color-black);
+}
+
+.about-text p {
+    margin: 0;
+}
+
+/* ==================== MY WORK SECTION ==================== */
+.work-section {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 0;
+    overflow: hidden;
+}
+
+.work-category {
+    position: relative;
+    padding: 60px;
+    padding-top: 40px;
+    z-index: 10;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-title {
+    font-family: var(--font-nunito);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-black);
+    margin-bottom: 30px;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-height: 700px;
+}
+
+.carousel.single-item {
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.carousel.single-item img {
+    max-width: 100%;
+    max-height: 600px;
+    border-radius: 20px;
+}
+
+.carousel.single-item .maximize-btn {
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.carousel-btn {
+    position: relative;
+    z-index: 20;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.2);
+    color: var(--color-green);
+}
+
+.carousel-btn svg {
+    width: 48px;
+    height: 48px;
+}
+
+.carousel-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 20px;
+    min-height: 700px;
+    background: white;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.carousel-item {
+    position: relative;
+    flex: 0 0 100%;
+    height: 100%;
+    min-width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.maximize-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--color-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.maximize-btn:hover {
+    background: var(--color-white);
+    transform: scale(1.1);
+}
+
+.maximize-btn svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    .badge-subtitle {
+        font-size: 80px;
+    }
+
+    .badge-title {
+        font-size: 160px;
+    }
+
+    .name-badge {
+        padding: 20px 40px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .about-image {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .section-title {
+        font-size: 150px;
+        padding-top: 150px;
+    }
+
+    .carousel-container {
+        min-height: 500px;
+    }
+
+    .carousel-item {
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --stripe-width: 50px;
+    }
+
+    .header,
+    .section-header,
+    .menu-header {
+        padding: 0 20px;
+        height: 80px;
+    }
+
+    .logo {
+        font-size: 48px;
+    }
+
+    .badge-subtitle {
+        font-size: 60px;
+    }
+
+    .badge-title {
+        font-size: 120px;
+    }
+
+    .menu-nav {
+        padding: 60px 20px;
+        gap: 30px;
+    }
+
+    .menu-link {
+        font-size: 48px;
+    }
+
+    .section-title {
+        font-size: 100px;
+        padding-top: 120px;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .carousel-container {
+        min-height: 400px;
+    }
+
+    .carousel-item {
+        min-width: 280px;
+    }
+
+    .work-category {
+        padding: 40px 20px;
+    }
+
+    .category-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .badge-subtitle {
+        font-size: 40px;
+    }
+
+    .badge-title {
+        font-size: 80px;
+    }
+
+    .section-title {
+        font-size: 60px;
+        padding-top: 100px;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .carousel-container {
+        min-height: 300px;
+    }
+
+    .carousel-item {
+        min-width: 220px;
+    }
+
+    .work-category {
+        padding: 30px 15px;
+    }
+
+    .maximize-btn {
+        top: 10px;
+        right: 10px;
+        padding: 6px;
+    }
+
+    .maximize-btn svg {
+        width: 30px;
+        height: 30px;
+    }
+}
