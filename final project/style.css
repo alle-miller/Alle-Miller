@@ -1,0 +1,89 @@
+.hero {
+  background-color: #ffffff;
+  aspect-ratio: 1.26;
+  width: 100%;
+  min-width: 1440px;
+  min-height: 1139px;
+  position: relative;
+}
+
+.hero .header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100px;
+  background-color: #e4568b;
+}
+
+.hero .AM {
+  position: absolute;
+  top: calc(50.00% - 38px);
+  left: calc(50.00% - 35px);
+  width: 70px;
+  height: 76px;
+}
+
+.hero .menu {
+  position: absolute;
+  top: calc(50.00% - 38px);
+  left: 76px;
+  width: 69px;
+  height: 69px;
+}
+
+.hero .group {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 1440px;
+  height: 1039px;
+}
+
+.hero .vector {
+  position: absolute;
+  top: 605px;
+  left: 102px;
+  width: 1276px;
+  height: 453px;
+}
+/* Inject the original CSS code above this comment */
+
+.hero .menu-button {
+  position: absolute;
+  top: calc(50% - 38px);
+  left: 76px;
+  width: 69px;
+  height: 69px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.hero .menu-button:focus {
+  outline: none;
+}
+
+.hero .menu-button .menu {
+  position: static;
+  display: block;
+  width: 69px;
+  height: 69px;
+}
+
+.hero .hero-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .menu-button:hover {
+  opacity: 1;
+}
+
+.hero .menu-button:active {
+  transform: none;
+}
