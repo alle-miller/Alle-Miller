@@ -1,3 +1,26 @@
+// ==================== NAVIGATION ACTIVE STATE ==================== 
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+
+// ==================== CONTACT FORM HANDLING ==================== 
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you for reaching out! I will get back to you soon.');
+        contactForm.reset();
+    });
+}
+
 // ==================== MENU TOGGLE ==================== 
 const menuToggle = document.getElementById('menuToggle');
 const menuToggle2 = document.getElementById('menuToggle2');
@@ -7,19 +30,23 @@ const menuModal = document.getElementById('menuModal');
 const menuLinks = document.querySelectorAll('.menu-link');
 
 function openMenu() {
-    menuModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    if (menuModal) {
+        menuModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
 }
 
 function closeMenu() {
-    menuModal.classList.remove('active');
-    document.body.style.overflow = 'auto';
+    if (menuModal) {
+        menuModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
 }
 
-menuToggle.addEventListener('click', openMenu);
-menuToggle2.addEventListener('click', openMenu);
-menuToggle3.addEventListener('click', openMenu);
-menuClose.addEventListener('click', closeMenu);
+if (menuToggle) menuToggle.addEventListener('click', openMenu);
+if (menuToggle2) menuToggle2.addEventListener('click', openMenu);
+if (menuToggle3) menuToggle3.addEventListener('click', openMenu);
+if (menuClose) menuClose.addEventListener('click', closeMenu);
 
 menuLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
@@ -27,11 +54,11 @@ menuLinks.forEach(link => {
 
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
-    if (menuModal.classList.contains('active') && 
+    if (menuModal && menuModal.classList.contains('active') && 
         !menuModal.contains(e.target) && 
-        !menuToggle.contains(e.target) &&
-        !menuToggle2.contains(e.target) &&
-        !menuToggle3.contains(e.target)) {
+        !menuToggle?.contains(e.target) &&
+        !menuToggle2?.contains(e.target) &&
+        !menuToggle3?.contains(e.target)) {
         closeMenu();
     }
 });
