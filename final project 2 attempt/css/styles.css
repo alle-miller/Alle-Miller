@@ -7,7 +7,7 @@
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
-  --accent-color: #e4568b;
+  --accent-color: #e73cd0;
   --light-bg: #f5f7fa;
   --text-dark: #2c3e50;
   --text-light: #7f8c8d;
@@ -120,7 +120,7 @@ nav {
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  background-color: #c0392b;
+  background-color: #e73cd0;
 }
 
 /* Work Page */
